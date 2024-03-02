@@ -7,7 +7,7 @@ function changeWeather(response) {
   let windSpeedElement = document.querySelector("#current-wind-speed");
   cityElement.innerHTML = response.data.city;
   temperatureElement.innerHTML = temperature;
-  descriptionElement.innerHTML = response.data.condition.description;
+  descriptionElement.innerHTML = `${response.data.condition.description}`;
   humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
   windSpeedElement.innerHTML = `${response.data.wind.speed}km/h`;
 }

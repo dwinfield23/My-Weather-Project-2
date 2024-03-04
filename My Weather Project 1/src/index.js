@@ -5,11 +5,13 @@ function changeWeather(response) {
   let descriptionElement = document.querySelector("#current-description");
   let humidityElement = document.querySelector("#current-humidity");
   let windSpeedElement = document.querySelector("#current-wind-speed");
+  let iconElement = document.querySelector("#current-icon");
   cityElement.innerHTML = response.data.city;
   temperatureElement.innerHTML = temperature;
   descriptionElement.innerHTML = `${response.data.condition.description}`;
   humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
   windSpeedElement.innerHTML = `${response.data.wind.speed}km/h`;
+  iconElement.innerHTML = `${response.data.condition.icon}`;
 }
 function search(event) {
   event.preventDefault();

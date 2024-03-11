@@ -11,8 +11,9 @@ function changeWeather(response) {
   descriptionElement.innerHTML = `${response.data.condition.description}`;
   humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
   windSpeedElement.innerHTML = `${response.data.wind.speed}km/h`;
-  iconElement.innerHTML = `${response.data.condition.icon}`;
+  iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="current-temperature-icon" />`;
 }
+
 function search(event) {
   event.preventDefault();
   let searchInputElement = document.querySelector("#search-input");

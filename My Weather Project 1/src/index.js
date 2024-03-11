@@ -5,7 +5,7 @@ function changeWeather(response) {
   let descriptionElement = document.querySelector("#current-description");
   let humidityElement = document.querySelector("#current-humidity");
   let windSpeedElement = document.querySelector("#current-wind-speed");
-  let iconElement = document.querySelector("#current-icon");
+  let iconElement = document.querySelector("#current-temperature-icon");
   cityElement.innerHTML = response.data.city;
   temperatureElement.innerHTML = temperature;
   descriptionElement.innerHTML = `${response.data.condition.description}`;

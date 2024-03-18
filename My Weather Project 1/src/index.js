@@ -2,9 +2,9 @@ function changeWeather(response) {
   let temperatureElement = document.querySelector("#current-temperature-value");
   let temperature = Math.round(response.data.temperature.current);
   let cityElement = document.querySelector("#current-city");
-  let descriptionElement = document.querySelector("#current-description");
-  let humidityElement = document.querySelector("#current-humidity");
-  let windSpeedElement = document.querySelector("#current-wind-speed");
+  let descriptionElement = document.querySelector("#description");
+  let humidityElement = document.querySelector("#humidity");
+  let windSpeedElement = document.querySelector("#wind");
   let iconElement = document.querySelector("#current-temperature-icon");
   cityElement.innerHTML = response.data.city;
   temperatureElement.innerHTML = temperature;
